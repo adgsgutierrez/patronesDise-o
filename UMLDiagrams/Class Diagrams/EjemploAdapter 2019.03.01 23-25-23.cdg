@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EjemploAdapter">
+  <ClassDiagramComponents>
+    <Class name="BatiMovilAdaptado" package="back" visibility="public" xPosition="547.0" yPosition="740.0">
+      <Fields>
+        <Field name="batiMovil" type="BatiMovil" visibility="package" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="frenar" returnType="void" visibility="public"/>
+        <Method name="acelerar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BatiMovil" package="back" visibility="public" xPosition="547.0" yPosition="994.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="batiFrenado" returnType="void" visibility="public"/>
+        <Method name="batiAceleado" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Carro" package="back" visibility="public" isAbstract="true" xPosition="844.0" yPosition="430.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="frenar" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="acelerar" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="CarroNormal" package="back" visibility="public" xPosition="844.0" yPosition="198.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="frenar" returnType="void" visibility="public"/>
+        <Method name="acelerar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CarrozaAdpter" package="adapter" visibility="public" xPosition="779.0" yPosition="740.0">
+      <Fields>
+        <Field name="carroza" type="Carroza" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="frenar" returnType="void" visibility="public"/>
+        <Method name="acelerar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TroncoMovilAdapter" package="adapter" visibility="public" xPosition="1233.0" yPosition="740.0">
+      <Fields>
+        <Field name="troncoMovil" type="TroncoMovil" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="frenar" returnType="void" visibility="public"/>
+        <Method name="acelerar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TricicloAdapter" package="adapter" visibility="public" xPosition="1002.0" yPosition="740.0">
+      <Fields>
+        <Field name="triciclo" type="Triciclo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="frenar" returnType="void" visibility="public"/>
+        <Method name="acelerar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TroncoMovil" package="adapter.old_arquitecture" visibility="public" xPosition="1247.0" yPosition="994.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="bajarPies" returnType="void" visibility="public"/>
+        <Method name="rozarPies" returnType="void" visibility="public"/>
+        <Method name="correr" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Triciclo" package="adapter.old_arquitecture" visibility="public" xPosition="1002.0" yPosition="994.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="bajarPies" returnType="void" visibility="public"/>
+        <Method name="rozarPies" returnType="void" visibility="public"/>
+        <Method name="pedalear" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Carroza" package="adapter.old_arquitecture" visibility="public" xPosition="779.0" yPosition="994.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="halarRiendas" returnType="void" visibility="public"/>
+        <Method name="movelRiendas" returnType="void" visibility="public"/>
+        <Method name="arrearCaballos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="front" visibility="public" xPosition="504.0" yPosition="198.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="triciclo" source="adapter.TricicloAdapter" target="adapter.old_arquitecture.Triciclo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="back.CarroNormal" target="back.Carro"/>
+    <HasRelation name="carroza" source="adapter.CarrozaAdpter" target="adapter.old_arquitecture.Carroza" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="adapter.TricicloAdapter" target="back.Carro"/>
+    <IsRelation name="is" source="back.BatiMovilAdaptado" target="back.Carro"/>
+    <IsRelation name="is" source="adapter.TroncoMovilAdapter" target="back.Carro"/>
+    <HasRelation name="batiMovil" source="back.BatiMovilAdaptado" target="back.BatiMovil" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="troncoMovil" source="adapter.TroncoMovilAdapter" target="adapter.old_arquitecture.TroncoMovil" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="adapter.CarrozaAdpter" target="back.Carro"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

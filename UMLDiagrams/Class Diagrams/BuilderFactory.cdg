@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="patternbuilder">
+  <ClassDiagramComponents>
+    <Class name="JsonBuilder" package="patternbuilder" visibility="public" xPosition="620.0" yPosition="858.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setMail" returnType="void" visibility="public"/>
+        <Method name="send" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Message" package="patternbuilder" visibility="public" xPosition="278.0" yPosition="357.0">
+      <Fields>
+        <Field name="from" type="String" visibility="private"/>
+        <Field name="to" type="String" visibility="private"/>
+        <Field name="subject" type="String" visibility="private"/>
+        <Field name="message" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getFrom" returnType="String" visibility="public"/>
+        <Method name="setFrom" returnType="void" visibility="public">
+          <Argument type="String" name="from"/>
+        </Method>
+        <Method name="getTo" returnType="String" visibility="public"/>
+        <Method name="setTo" returnType="void" visibility="public">
+          <Argument type="String" name="to"/>
+        </Method>
+        <Method name="getSubject" returnType="String" visibility="public"/>
+        <Method name="setSubject" returnType="void" visibility="public">
+          <Argument type="String" name="subject"/>
+        </Method>
+        <Method name="getMessage" returnType="String" visibility="public"/>
+        <Method name="setMessage" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MessageBuilder" package="patternbuilder" visibility="public" isAbstract="true" xPosition="839.0" yPosition="357.0">
+      <Fields>
+        <Field name="message" type="Message" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getMessage" returnType="Message" visibility="public"/>
+        <Method name="newMessage" returnType="void" visibility="public"/>
+        <Method name="setMail" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="send" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="SendMail" package="patternbuilder" visibility="public" xPosition="1286.0" yPosition="357.0">
+      <Fields>
+        <Field name="message" type="MessageBuilder" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getMessage" returnType="MessageBuilder" visibility="public"/>
+        <Method name="setMessage" returnType="void" visibility="public">
+          <Argument type="MessageBuilder" name="message"/>
+        </Method>
+        <Method name="loadMail" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="XmlBuilder" package="patternbuilder" visibility="public" xPosition="842.0" yPosition="858.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setMail" returnType="void" visibility="public"/>
+        <Method name="send" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PatternBuilder" package="patternbuilder" visibility="public" xPosition="818.0" yPosition="180.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MailBuilder" package="patternbuilder" visibility="public" xPosition="1044.0" yPosition="858.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setMail" returnType="void" visibility="public"/>
+        <Method name="send" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="message" source="patternbuilder.SendMail" target="patternbuilder.MessageBuilder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="patternbuilder.XmlBuilder" target="patternbuilder.MessageBuilder"/>
+    <HasRelation name="message" source="patternbuilder.MessageBuilder" target="patternbuilder.Message" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="patternbuilder.PatternBuilder" target="patternbuilder.MessageBuilder"/>
+    <IsRelation name="is" source="patternbuilder.MailBuilder" target="patternbuilder.MessageBuilder"/>
+    <IsRelation name="is" source="patternbuilder.JsonBuilder" target="patternbuilder.MessageBuilder"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

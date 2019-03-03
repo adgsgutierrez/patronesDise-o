@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="pattern">
+  <ClassDiagramComponents>
+    <Class name="StartPattern" package="pattern" visibility="public" xPosition="420.0" yPosition="1431.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="OracleOrderDAO" package="pattern.dao.order" visibility="public" xPosition="804.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertOrder" returnType="int" visibility="public"/>
+        <Method name="deleteOrder" returnType="boolean" visibility="public"/>
+        <Method name="findOrder" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SybaseOrderDAO" package="pattern.dao.order" visibility="public" xPosition="1030.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertOrder" returnType="int" visibility="public"/>
+        <Method name="deleteOrder" returnType="boolean" visibility="public"/>
+        <Method name="findOrder" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CloudscapeOrderDAO" package="pattern.dao.order" visibility="public" xPosition="1256.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertOrder" returnType="int" visibility="public"/>
+        <Method name="deleteOrder" returnType="boolean" visibility="public"/>
+        <Method name="findOrder" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CloudscapeAccountDAO" package="pattern.dao.account" visibility="public" xPosition="1512.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertAccount" returnType="int" visibility="public"/>
+        <Method name="deleteAccount" returnType="boolean" visibility="public"/>
+        <Method name="findAccount" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SybaseAccountDAO" package="pattern.dao.account" visibility="public" xPosition="1728.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertAccount" returnType="int" visibility="public"/>
+        <Method name="deleteAccount" returnType="boolean" visibility="public"/>
+        <Method name="findAccount" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OracleAccountDAO" package="pattern.dao.account" visibility="public" xPosition="1928.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertAccount" returnType="int" visibility="public"/>
+        <Method name="deleteAccount" returnType="boolean" visibility="public"/>
+        <Method name="findAccount" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CloudscapeCustomerDAO" package="pattern.dao.customer" visibility="public" xPosition="584.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertCustomer" returnType="int" visibility="public"/>
+        <Method name="deleteCustomer" returnType="boolean" visibility="public"/>
+        <Method name="findCustomer" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OracleCustomerDAO" package="pattern.dao.customer" visibility="public" xPosition="166.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertCustomer" returnType="int" visibility="public"/>
+        <Method name="deleteCustomer" returnType="boolean" visibility="public"/>
+        <Method name="findCustomer" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SybaseCustomerDAO" package="pattern.dao.customer" visibility="public" xPosition="376.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="insertCustomer" returnType="int" visibility="public"/>
+        <Method name="deleteCustomer" returnType="boolean" visibility="public"/>
+        <Method name="findCustomer" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CloudscapeDAOFactory" package="pattern.factories" visibility="public" xPosition="349.0" yPosition="857.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getCustomerDAO" returnType="CustomerDAO" visibility="public"/>
+        <Method name="getAccountDAO" returnType="AccountDAO" visibility="public"/>
+        <Method name="getOrderDAO" returnType="OrderDAO" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SybaseDAOFactory" package="pattern.factories" visibility="public" xPosition="950.0" yPosition="857.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getCustomerDAO" returnType="CustomerDAO" visibility="public"/>
+        <Method name="getAccountDAO" returnType="AccountDAO" visibility="public"/>
+        <Method name="getOrderDAO" returnType="OrderDAO" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OracleDAOFactory" package="pattern.factories" visibility="public" xPosition="1612.0" yPosition="857.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getCustomerDAO" returnType="CustomerDAO" visibility="public"/>
+        <Method name="getAccountDAO" returnType="AccountDAO" visibility="public"/>
+        <Method name="getOrderDAO" returnType="OrderDAO" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DAOFactory" package="pattern" visibility="public" isAbstract="true" xPosition="930.0" yPosition="1359.0">
+      <Fields>
+        <Field name="CLOUDSCAPE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ORACLE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="SYBASE" type="int" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCustomerDAO" returnType="CustomerDAO" visibility="public" isAbstract="true"/>
+        <Method name="getAccountDAO" returnType="AccountDAO" visibility="public" isAbstract="true"/>
+        <Method name="getOrderDAO" returnType="OrderDAO" visibility="public" isAbstract="true"/>
+        <Method name="getDAOFactory" returnType="DAOFactory" visibility="public" isStatic="true">
+          <Argument type="int" name="whichFactory"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="OrderDAO" package="pattern.interfaces" visibility="public" xPosition="982.0" yPosition="446.0">
+      <Methods>
+        <Method name="insertOrder" returnType="int" visibility="public"/>
+        <Method name="deleteOrder" returnType="boolean" visibility="public"/>
+        <Method name="findOrder" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="CustomerDAO" package="pattern.interfaces" visibility="public" xPosition="402.0" yPosition="446.0">
+      <Methods>
+        <Method name="insertCustomer" returnType="int" visibility="public"/>
+        <Method name="deleteCustomer" returnType="boolean" visibility="public"/>
+        <Method name="findCustomer" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="AccountDAO" package="pattern.interfaces" visibility="public" xPosition="1703.0" yPosition="446.0">
+      <Methods>
+        <Method name="insertAccount" returnType="int" visibility="public"/>
+        <Method name="deleteAccount" returnType="boolean" visibility="public"/>
+        <Method name="findAccount" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.order.CloudscapeOrderDAO" target="pattern.interfaces.OrderDAO"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.account.SybaseAccountDAO" target="pattern.interfaces.AccountDAO"/>
+    <UseRelation source="pattern.factories.OracleDAOFactory" target="pattern.interfaces.AccountDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="pattern.factories.SybaseDAOFactory" target="pattern.interfaces.AccountDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="pattern.factories.SybaseDAOFactory" target="pattern.interfaces.CustomerDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.order.OracleOrderDAO" target="pattern.interfaces.OrderDAO"/>
+    <UseRelation source="pattern.factories.CloudscapeDAOFactory" target="pattern.interfaces.CustomerDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.order.SybaseOrderDAO" target="pattern.interfaces.OrderDAO"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.customer.OracleCustomerDAO" target="pattern.interfaces.CustomerDAO"/>
+    <UseRelation source="pattern.factories.OracleDAOFactory" target="pattern.interfaces.CustomerDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="pattern.factories.CloudscapeDAOFactory" target="pattern.interfaces.OrderDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="pattern.factories.OracleDAOFactory" target="pattern.DAOFactory"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.account.CloudscapeAccountDAO" target="pattern.interfaces.AccountDAO"/>
+    <UseRelation source="pattern.factories.SybaseDAOFactory" target="pattern.interfaces.OrderDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="pattern.factories.CloudscapeDAOFactory" target="pattern.interfaces.AccountDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="pattern.factories.OracleDAOFactory" target="pattern.interfaces.OrderDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="pattern.factories.CloudscapeDAOFactory" target="pattern.DAOFactory"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.customer.SybaseCustomerDAO" target="pattern.interfaces.CustomerDAO"/>
+    <IsRelation name="is" source="pattern.factories.SybaseDAOFactory" target="pattern.DAOFactory"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.account.OracleAccountDAO" target="pattern.interfaces.AccountDAO"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pattern.dao.customer.CloudscapeCustomerDAO" target="pattern.interfaces.CustomerDAO"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
