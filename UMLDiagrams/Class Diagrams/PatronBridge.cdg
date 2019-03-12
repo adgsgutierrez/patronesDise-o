@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PatronBridge">
+  <ClassDiagramComponents>
+    <Class name="Choriperro" package="patronbridge.perro" visibility="public" xPosition="20.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="preparacionPan" returnType="void" visibility="public"/>
+        <Method name="procesar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Transmilenio" package="patronbridge.perro" visibility="public" xPosition="416.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="preparacionPan" returnType="void" visibility="public"/>
+        <Method name="procesar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Sencillo" package="patronbridge.perro" visibility="public" xPosition="217.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="preparacionPan" returnType="void" visibility="public"/>
+        <Method name="procesar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PatronBridge" package="patronbridge" visibility="public" xPosition="860.0" yPosition="47.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Bolonesa" package="patronbridge.pasta" visibility="public" xPosition="1747.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="procesar" returnType="void" visibility="public"/>
+        <Method name="cocinarEnBañoMaria" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Espinacas" package="patronbridge.pasta" visibility="public" xPosition="1293.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="procesar" returnType="void" visibility="public"/>
+        <Method name="cocinarEnBañoMaria" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pesto" package="patronbridge.pasta" visibility="public" xPosition="1520.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="procesar" returnType="void" visibility="public"/>
+        <Method name="cocinarEnBañoMaria" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Preparacion" package="patronbridge" visibility="public" isAbstract="true" xPosition="800.0" yPosition="229.0">
+      <Fields>
+        <Field name="implementador" type="IProcesar" visibility="package"/>
+        <Field name="nombre" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getImplementador" returnType="IProcesar" visibility="public"/>
+        <Method name="setImplementador" returnType="void" visibility="public">
+          <Argument type="IProcesar" name="implementador"/>
+        </Method>
+        <Method name="obtener" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="DobleCarne" package="patronbridge.hamburguesa" visibility="public" xPosition="866.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="preparacionCubierta" returnType="void" visibility="public"/>
+        <Method name="procesar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vegetariana" package="patronbridge.hamburguesa" visibility="public" xPosition="1078.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="preparacionCubierta" returnType="void" visibility="public"/>
+        <Method name="procesar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TodoTerreno" package="patronbridge.hamburguesa" visibility="public" xPosition="635.0" yPosition="1018.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="preparacionCubierta" returnType="void" visibility="public"/>
+        <Method name="procesar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ElaborarProducto" package="patronbridge" visibility="public" xPosition="1310.0" yPosition="262.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IProcesar" name="implementador"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="obtener" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="IProcesar" package="patronbridge" visibility="public" xPosition="881.0" yPosition="569.0">
+      <Methods>
+        <Method name="procesar" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="PerroCaliente" package="patronbridge.perro" visibility="public" xPosition="217.0" yPosition="798.0">
+      <Methods>
+        <Method name="preparacionPan" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Pasta" package="patronbridge.pasta" visibility="public" xPosition="1490.0" yPosition="788.0">
+      <Methods>
+        <Method name="cocinarEnBañoMaria" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Hamburguesa" package="patronbridge.hamburguesa" visibility="public" xPosition="866.0" yPosition="788.0">
+      <Methods>
+        <Method name="preparacionCubierta" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.perro.Choriperro" target="patronbridge.perro.PerroCaliente"/>
+    <UseRelation source="patronbridge.Preparacion" target="patronbridge.IProcesar" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.perro.Transmilenio" target="patronbridge.perro.PerroCaliente"/>
+    <IsRelation name="is" source="patronbridge.perro.PerroCaliente" target="patronbridge.IProcesar"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.hamburguesa.TodoTerreno" target="patronbridge.hamburguesa.Hamburguesa"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.hamburguesa.DobleCarne" target="patronbridge.hamburguesa.Hamburguesa"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.perro.Sencillo" target="patronbridge.perro.PerroCaliente"/>
+    <IsRelation name="is" source="patronbridge.hamburguesa.Hamburguesa" target="patronbridge.IProcesar"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.pasta.Espinacas" target="patronbridge.pasta.Pasta"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.pasta.Pesto" target="patronbridge.pasta.Pasta"/>
+    <IsRelation name="is" source="patronbridge.ElaborarProducto" target="patronbridge.Preparacion"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.hamburguesa.Vegetariana" target="patronbridge.hamburguesa.Hamburguesa"/>
+    <IsRelation name="is" source="patronbridge.pasta.Pasta" target="patronbridge.IProcesar"/>
+    <HasRelation name="implementador" source="patronbridge.Preparacion" target="patronbridge.IProcesar" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patronbridge.pasta.Bolonesa" target="patronbridge.pasta.Pasta"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
