@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Decorator">
+  <ClassDiagramComponents>
+    <Class name="ExampleDecoratorPattern" package="exampledecorator.run" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mp4Player" package="exampledecoratorpattern.decorator" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Polarizado" package="exampledecoratorpattern.decorator" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VidriosElectricos" package="exampledecoratorpattern.decorator" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RadioGPS" package="exampledecoratorpattern.decorator" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RadioBasico" package="exampledecoratorpattern.decorator" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RadioDVD" package="exampledecoratorpattern.decorator" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Blindaje" package="exampledecoratorpattern.decorator" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Internos" package="exampledecoratorpattern.decorator" visibility="public" isAbstract="true" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Externos" package="exampledecoratorpattern.decorator" visibility="public" isAbstract="true" xPosition="320.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AireAcondicionado" package="exampledecoratorpattern.decorator" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LlantasLujo" package="exampledecoratorpattern.decorator" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AutomovilDecorator" package="exampledecoratorpattern" visibility="public" isAbstract="true" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="ventaAuto" type="VentaAuto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVentaAuto" returnType="VentaAuto" visibility="public"/>
+        <Method name="setVentaAuto" returnType="void" visibility="public">
+          <Argument type="VentaAuto" name="ventaAuto"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BMW" package="exampledecoratorpattern.components" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ChevroletSail" package="exampledecoratorpattern.components" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ChevroletSprint" package="exampledecoratorpattern.components" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Automovil" package="exampledecoratorpattern.components" visibility="public" isAbstract="true" xPosition="20.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Toyota" package="exampledecoratorpattern.components" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="VentaAuto" package="exampledecoratorpattern" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Methods>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.Externos" target="exampledecoratorpattern.AutomovilDecorator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="exampledecoratorpattern.AutomovilDecorator" target="exampledecoratorpattern.VentaAuto"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.RadioDVD" target="exampledecoratorpattern.decorator.Internos"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.Blindaje" target="exampledecoratorpattern.decorator.Externos"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.RadioBasico" target="exampledecoratorpattern.decorator.Internos"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.Internos" target="exampledecoratorpattern.AutomovilDecorator"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.Polarizado" target="exampledecoratorpattern.decorator.Externos"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.AireAcondicionado" target="exampledecoratorpattern.decorator.Internos"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.LlantasLujo" target="exampledecoratorpattern.decorator.Externos"/>
+    <IsRelation name="is" source="exampledecoratorpattern.components.ChevroletSprint" target="exampledecoratorpattern.components.Automovil"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.RadioGPS" target="exampledecoratorpattern.decorator.Internos"/>
+    <IsRelation name="is" source="exampledecoratorpattern.components.Toyota" target="exampledecoratorpattern.components.Automovil"/>
+    <IsRelation name="is" source="exampledecoratorpattern.components.BMW" target="exampledecoratorpattern.components.Automovil"/>
+    <UseRelation source="exampledecoratorpattern.AutomovilDecorator" target="exampledecoratorpattern.VentaAuto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.Mp4Player" target="exampledecoratorpattern.decorator.Internos"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="exampledecoratorpattern.components.Automovil" target="exampledecoratorpattern.VentaAuto"/>
+    <IsRelation name="is" source="exampledecoratorpattern.decorator.VidriosElectricos" target="exampledecoratorpattern.decorator.Externos"/>
+    <HasRelation name="ventaAuto" source="exampledecoratorpattern.AutomovilDecorator" target="exampledecoratorpattern.VentaAuto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="exampledecoratorpattern.components.ChevroletSail" target="exampledecoratorpattern.components.Automovil"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

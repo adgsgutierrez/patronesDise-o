@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PatronComposite">
+  <ClassDiagramComponents>
+    <Class name="PatronComposite" package="patroncomposite" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="patroncomposite" visibility="public" xPosition="531.0" yPosition="3.0">
+      <Fields>
+        <Field name="caja1" type="Box" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="loadBox" returnType="void" visibility="public"/>
+        <Method name="showWeight" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DVD" package="patroncomposite.pattern" visibility="public" xPosition="80.0" yPosition="220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getWeight" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Box" package="patroncomposite.pattern" visibility="public" xPosition="509.0" yPosition="220.0">
+      <Fields>
+        <Field name="content" type="ArrayList&lt;IBox&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addElement" returnType="void" visibility="public">
+          <Argument type="IBox" name="object"/>
+        </Method>
+        <Method name="getWeight" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CD" package="patroncomposite.pattern" visibility="public" xPosition="292.0" yPosition="220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getWeight" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="IBox" package="patroncomposite.pattern" visibility="public" xPosition="391.0" yPosition="481.0">
+      <Methods>
+        <Method name="getWeight" returnType="int" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="content" source="patroncomposite.pattern.Box" target="patroncomposite.pattern.IBox" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;IBox&gt;"/>
+    <UseRelation source="patroncomposite.pattern.Box" target="patroncomposite.pattern.Box" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patroncomposite.pattern.CD" target="patroncomposite.pattern.IBox"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patroncomposite.pattern.DVD" target="patroncomposite.pattern.IBox"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="patroncomposite.pattern.Box" target="patroncomposite.pattern.IBox"/>
+    <HasRelation name="caja1" source="patroncomposite.Cliente" target="patroncomposite.pattern.Box" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

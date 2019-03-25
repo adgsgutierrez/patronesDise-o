@@ -29,3 +29,10 @@ hs_err_pid*
 /AbstractFacroty/build/
 /PatternBuilder/nbproject/private/
 /PatternBuilder/build/
+/PatronComposite/nbproject/private/
+/PatronComposite/build/
+/ExampleDecoratorPattern/build/
+/ExampleDecoratorPattern/nbproject/private/
+/ExampleDecoratorPattern/dist/
+/Decorator/nbproject/private/
+/Decorator/build/
